@@ -14,8 +14,6 @@ fs.readdir(fileStyles, (err, files) => {
         const pathFile = path.join(fileStyles, file);
         const output = fs.createReadStream(pathFile, 'utf-8');
         output.pipe(writeFile);
-        // output.on('data', chunk => writeFile.write(chunk));
-        // output.on('error', error => console.log('Error', error.message));
       }
     });
   });
